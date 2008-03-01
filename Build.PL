@@ -6,7 +6,10 @@ use Module::Build;
 my $builder = Module::Build->new
     ( module_name        => 'Catalyst::Plugin::RedirectAndDetach',
       license            => 'perl',
-      requires           => { 'Test::More' => 0,
+      requires           => { 'Catalyst'         => 0,
+                              'Params::Validate' => 0,
+                            },
+      build_requires     => { 'Test::More' => 0,
                             },
       create_makefile_pl => 'passthrough',
       create_readme      => 1,

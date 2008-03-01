@@ -3,7 +3,7 @@ package Catalyst::Plugin::RedirectAndDetach;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Params::Validate qw( validate_pos SCALAR );
 
