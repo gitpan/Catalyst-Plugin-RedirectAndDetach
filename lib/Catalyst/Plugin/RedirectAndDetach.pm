@@ -3,13 +3,13 @@ package Catalyst::Plugin::RedirectAndDetach;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
-use Params::Validate qw( validate_pos SCALAR );
+use Params::Validate qw( validate_pos SCALAR OBJECT );
 
 
 {
-    my @spec = ( { type => SCALAR },
+    my @spec = ( { type => SCALAR | OBJECT },
                  { type => SCALAR, default => undef } );
 
     sub redirect_and_detach
@@ -57,6 +57,10 @@ Catalyst::Plugin::RedirectAndDetach - Redirect and detach at the same time
 I generally find that if I want to issue a redirect in my web app, I
 want to stop processing right there. This plugin adds a ridiculously
 simply method to your Catalyst objects to do just that.
+
+The reason to use C<detach()> instead of simply returning from the
+current sub is that C<detach()> throws an exception that effectively
+aborts all execution, rather than simply exiting the current method.
 
 =head1 METHODS
 

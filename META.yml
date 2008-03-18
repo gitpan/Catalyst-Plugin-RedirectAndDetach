@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-RedirectAndDetach
-version: 0.02
+version: 0.03
 author:
   - 'Dave Rolsky, C<< <autarch@urth.org> >>'
 abstract: Redirect and detach at the same time
@@ -15,7 +15,7 @@ build_requires:
 provides:
   Catalyst::Plugin::RedirectAndDetach:
     file: lib/Catalyst/Plugin/RedirectAndDetach.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

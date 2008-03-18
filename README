@@ -25,6 +25,10 @@ DESCRIPTION
     want to stop processing right there. This plugin adds a ridiculously
     simply method to your Catalyst objects to do just that.
 
+    The reason to use "detach()" instead of simply returning from the
+    current sub is that "detach()" throws an exception that effectively
+    aborts all execution, rather than simply exiting the current method.
+
 METHODS
     This class provides one method:
 
